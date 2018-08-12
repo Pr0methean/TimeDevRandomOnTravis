@@ -1,5 +1,5 @@
 script:
-  - travis_wait 49 "time (head -c 100000 /dev/random > /dev/null)"
+  - travis_wait 49 ./time_dev_random.sh
 jobs:
   include:
     - os: linux
