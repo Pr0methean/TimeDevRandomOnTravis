@@ -1,8 +1,9 @@
 script:
   - time (head -c 1M /dev/random > /dev/null)
 jobs:
-  - os: linux
-    sudo: required
-  - os: linux
-    sudo: false
-  - os: osx
+  include:
+    - os: linux
+      sudo: required
+    - os: linux
+      sudo: false
+    - os: osx
